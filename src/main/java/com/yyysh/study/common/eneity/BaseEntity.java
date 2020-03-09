@@ -2,6 +2,8 @@ package com.yyysh.study.common.eneity;
 
 import java.util.Date;
 
+import javax.persistence.Id;
+
 /**
  * 
 * @ClassName: BaseEntity 
@@ -12,6 +14,10 @@ import java.util.Date;
  */
 public class BaseEntity {
 
+	//id主键
+	@Id
+	private String id;
+	
     /**
       * 新增人
      */
@@ -32,6 +38,15 @@ public class BaseEntity {
             * 更新时间
      */
     private Date updateTime;
+    
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+    
 	public String getCreateId() {
 		return createId;
 	}

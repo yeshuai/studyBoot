@@ -3,6 +3,8 @@ package com.yyysh.study.boots.sys.vo;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Table;
+
 import com.yyysh.study.common.eneity.BaseEntity;
 /**
  * 
@@ -12,6 +14,7 @@ import com.yyysh.study.common.eneity.BaseEntity;
 * @date 2020年3月3日 上午10:16:37 
 *
  */
+@Table(name="t_sys_user")
 public class UserVO extends BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -21,8 +24,6 @@ public class UserVO extends BaseEntity implements Serializable {
 	 */
 	private List<String> roleIdList;
 
-	//id主键
-	private String id;
 	//用户名
 	private String userName;
 	//登陆帐户
@@ -51,14 +52,6 @@ public class UserVO extends BaseEntity implements Serializable {
 
 	public void setRoleIdList(List<String> roleIdList) {
 		this.roleIdList = roleIdList;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public String getUserName() {
