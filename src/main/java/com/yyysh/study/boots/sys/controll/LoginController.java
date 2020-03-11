@@ -37,10 +37,10 @@ public class LoginController extends BaseController{
     @GetMapping("/login")
     public String login() {
         logger.info("GET请求登录");
-        if (SecurityUtils.getSubject().isAuthenticated()) {
+      /*  if (SecurityUtils.getSubject().isAuthenticated()) {
             return "redirect:/index";
-        }
-        return "login";
+        }*/
+        return "system/login";
     }
     
     
@@ -51,7 +51,7 @@ public class LoginController extends BaseController{
      * @param password 密码
      * @return {Object}
      */
-    @PostMapping("/login")
+    @PostMapping("/loginsubmit")
     @ResponseBody
     public Object loginPost(HttpServletRequest request, HttpServletResponse response,
             String username, String password, String captcha, 
